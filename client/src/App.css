@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #FFCCEA; } /* Match the color to your highlight */
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.1em solid #FFCCEA; /* Highlight color */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
